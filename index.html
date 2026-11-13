@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BFF Coffee · Bean &amp; Frosty Fusion · San Diego Coffee Cart</title>
+  <meta name="description" content="BFF Coffee (Bean & Frosty Fusion) is a San Diego mobile espresso bar serving neighborhood pop-ups, farmers markets, and catering for events of 30+ guests.">
+  <meta name="theme-color" content="#2b1a12">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BFF Coffee · San Diego's mobile espresso bar">
+  <meta property="og:description" content="Neighborhood pop-ups, farmers markets, and coffee cart catering for events of 30+ guests.">
+  <meta property="og:image" content="https://ricardogibran.github.io/bff-coffee-site/images/logo.jpeg">
+  <meta property="og:url" content="https://ricardogibran.github.io/bff-coffee-site/">
+  <link rel="icon" type="image/png" href="images/mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Nunito:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Pick the theme before the page paints: the visitor's saved choice, otherwise their device setting. */
+    (function () {
+      var root = document.documentElement, t = null;
+      root.classList.add("js");
+      try { t = localStorage.getItem("bff-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      root.setAttribute("data-theme", t);
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "BFF Coffee (Bean & Frosty Fusion)",
+    "description": "Mobile espresso bar serving pop-ups, farmers markets, and event catering in San Diego.",
+    "areaServed": "San Diego County, CA",
+    "email": "gibran.corro05@gmail.com",
+    "sameAs": [
+      "https://www.instagram.com/beanfrostyfusion/",
+      "https://www.facebook.com/BeanFrostyFusion/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Reusable bean-heart line drawing -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bean-heart" viewBox="0 0 120 104">
+      <g transform="rotate(-24 42 52)"><ellipse cx="42" cy="52" rx="24" ry="38"/><path d="M42 14C30 34 54 68 42 90"/></g>
+      <g transform="rotate(24 78 52)"><ellipse cx="78" cy="52" rx="24" ry="38"/><path d="M78 14C90 34 66 68 78 90"/></g>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ ANNOUNCEMENT BAR (text is filled in by script.js from the next event) ============ -->
+  <a class="announce" id="announce" href="#catering">Now booking coffee cart catering for events of 30+ guests <span aria-hidden="true">→</span></a>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header at-top" id="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a href="#home" class="nav-brand" aria-label="BFF Coffee home">
+        <img class="brand-color" src="images/mark.png" alt="" width="264" height="252">
+        <img class="brand-light" src="images/mark-light.png" alt="" width="264" height="252">
+        <span>bff coffee</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#catering">Catering</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#book" class="btn btn-small">Book now!</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.500A8 8 0 0 1 9.500 4a8 8 0 1 0 10.500 10.500Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.500v2M12 19.500v2M2.500 12h2M19.500 12h2M5.300 5.300l1.400 1.400M17.300 17.300l1.400 1.400M5.300 18.700l1.400-1.400M17.300 6.700l1.400-1.400"/></svg>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============
+         Add a photo: save it as images/hero.jpg and it fills the background automatically. -->
+    <section id="home" class="hero">
+      <img class="photo" src="images/hero.jpg" alt="" onerror="this.remove()">
+      <svg class="hero-art" aria-hidden="true"><use href="#bean-heart"/></svg>
+      <div class="container hero-inner">
+        <p class="eyebrow">San Diego's mobile espresso bar</p>
+        <h1>Good coffee, made by friends, wherever you are.</h1>
+        <p class="lead">We roll our cart into neighborhood pop-ups and farmers markets around San Diego, and we cater weddings, corporate events, and celebrations of 30+ guests.</p>
+        <div class="hero-actions">
+          <a href="#events" class="btn btn-light">See upcoming pop-ups</a>
+          <a href="#catering" class="btn btn-ghost">Book catering</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MISSION ============ -->
+    <section class="mission">
+      <div class="container">
+        <p class="script reveal">Bean &amp; Frosty Fusion</p>
+        <p class="mission-text reveal">We pair <strong>handcrafted espresso</strong> with <strong>flavors that feel like home</strong>, and pour it <strong>wherever San Diego gathers</strong>.</p>
+        <ul class="facts reveal">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16l-1.2-4.5A2 2 0 0 0 16.9 4H7.1a2 2 0 0 0-1.9 1.5L4 10Z"/><path d="M5 10v9h14v-9M9 19v-5h6v5"/></svg>
+            <strong>Pop-ups</strong><span>Neighborhoods &amp; farmers markets</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V9Z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3v3M12 3v3"/></svg>
+            <strong>Catering</strong><span>Events of 30+ guests</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.500C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <strong>San Diego</strong><span>Serving the whole county</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============
+         Add photos: save them as images/about-1.jpg, about-2.jpg, about-3.jpg and they replace the cards below. -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="collage reveal" aria-hidden="true">
+          <div class="collage-card c1">
+            <svg><use href="#bean-heart"/></svg>
+            <img class="photo" src="images/about-1.jpg" alt="" onerror="this.remove()">
+          </div>
+          <div class="collage-card c2">
+            <img class="collage-logo" src="images/logo.png" alt="" width="264" height="292">
+            <img class="photo" src="images/about-2.jpg" alt="" onerror="this.remove()">
+          </div>
+          <div class="collage-card c3">
+            <span class="script">pop-ups<br>&amp; catering</span>
+            <img class="photo" src="images/about-3.jpg" alt="" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p class="eyebrow">Our story</p>
+          <h2>Coffee is better with a best friend.</h2>
+          <!-- PLACEHOLDER COPY — replace with your own story -->
+          <p>BFF started with a simple idea: the best coffee is the one you share with friends. What began as a love for espresso and Mexican-inspired flavors turned into a mobile coffee cart that brings handcrafted drinks straight to San Diego's neighborhoods.</p>
+          <p>From farmers markets to backyard weddings, we pull every shot to order and build drinks around flavors that feel like home: mazapán, apple pie, and warm spiced chai.</p>
+          <div class="btn-row">
+            <a href="#events" class="btn">Find a pop-up</a>
+            <a href="https://www.instagram.com/beanfrostyfusion/" target="_blank" rel="noopener" class="btn btn-outline">Follow on Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section id="menu" class="section section-tint">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">What we pour</p>
+          <h2>Our Menu</h2>
+          <p class="muted">Every drink is made to order, hot or iced.</p>
+        </div>
+        <!-- The short descriptions under each drink are drafts — edit them to match your recipes. -->
+        <div class="menu-grid">
+          <article class="menu-card reveal">
+            <h3>Traditional Espresso</h3>
+            <ul>
+              <li><strong>Espresso</strong><span>Pulled fresh, by the shot</span></li>
+              <li><strong>Cortado</strong><span>Espresso cut with a little steamed milk</span></li>
+              <li><strong>Cappuccino</strong><span>Espresso, steamed milk, and thick foam</span></li>
+              <li><strong>Flat White</strong><span>Espresso with silky microfoam</span></li>
+              <li><strong>Latte</strong><span>Espresso and steamed milk, plain or flavored</span></li>
+            </ul>
+          </article>
+          <article class="menu-card menu-card-featured reveal">
+            <span class="tag">House favorites</span>
+            <h3>Signature Drinks</h3>
+            <ul>
+              <li><strong>Mazapán Latte</strong><span>Inspired by the Mexican peanut candy</span></li>
+              <li><strong>Apple Pie Latte</strong><span>Apple, cinnamon, and warm spice</span></li>
+              <li><strong>Pumpkin Spice Latte</strong><span>The fall classic</span></li>
+            </ul>
+            <svg class="menu-art" aria-hidden="true"><use href="#bean-heart"/></svg>
+          </article>
+          <article class="menu-card reveal">
+            <h3>Teas</h3>
+            <ul>
+              <li><strong>Chai</strong><span>Black tea and warming spices</span></li>
+              <li><strong>Matcha</strong><span>Whisked green tea with milk</span></li>
+              <li><strong>Banana Chai</strong><span>Our chai with a banana twist</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section id="events" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Find the cart</p>
+          <h2>Upcoming Pop-Ups</h2>
+          <p class="muted">Dates change sometimes. Check our <a href="https://www.instagram.com/beanfrostyfusion/" target="_blank" rel="noopener">Instagram</a> for same-day updates.</p>
+        </div>
+        <!-- Events are rendered by script.js — edit the EVENTS list at the top of that file. -->
+        <div class="events" id="events-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ CATERING ============ -->
+    <section id="catering" class="section section-tint">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Bring the cart to you</p>
+          <h2>Catering</h2>
+          <p class="muted">A full espresso bar for events of <strong>30 guests or more</strong>. We bring the cart, the baristas, and everything needed to serve.</p>
+          <ul class="chips" aria-label="Events we cater">
+            <li>Weddings</li><li>Corporate events</li><li>Private parties</li><li>Special occasions</li>
+          </ul>
+        </div>
+
+        <div class="packages">
+          <article class="package reveal">
+            <h3>Basic</h3>
+            <p class="package-sub">The classics, done right</p>
+            <ul class="checks">
+              <li>Traditional espresso drinks: espresso, cortado, cappuccino, flat white, latte</li>
+              <li>Classic syrups: vanilla, caramel, mocha &amp; more</li>
+              <li>Hot or iced</li>
+            </ul>
+            <a href="#book" class="btn btn-outline" data-package="Basic">Book Basic</a>
+          </article>
+          <article class="package package-premium reveal">
+            <span class="tag">Most popular</span>
+            <h3>Premium</h3>
+            <p class="package-sub">The full BFF experience</p>
+            <ul class="checks">
+              <li>Everything in Basic</li>
+              <li>Matcha &amp; chai, including our Banana Chai</li>
+              <li>Signature drinks: Mazapán, Apple Pie &amp; Pumpkin Spice Lattes</li>
+            </ul>
+            <a href="#book" class="btn" data-package="Premium">Book Premium</a>
+          </article>
+        </div>
+
+        <ol class="steps reveal" aria-label="How booking works">
+          <li><span class="step-n">1</span><div><h3>Send a request</h3><p>Tell us your date, guest count, and package.</p></div></li>
+          <li><span class="step-n">2</span><div><h3>Get your quote</h3><p>We confirm availability and send pricing.</p></div></li>
+          <li><span class="step-n">3</span><div><h3>We roll up &amp; pour</h3><p>The cart arrives, sets up, and serves your guests.</p></div></li>
+        </ol>
+
+        <!-- ============ BOOKING FORM ============ -->
+        <div id="book" class="book reveal">
+          <div class="book-side">
+            <svg class="book-art" aria-hidden="true"><use href="#bean-heart"/></svg>
+            <p class="eyebrow">Catering request</p>
+            <h2>Book now!</h2>
+            <p>Tell us about your event and we'll get back to you with availability and a quote.</p>
+            <ul class="book-points">
+              <li>Events of 30+ guests</li>
+              <li>Basic or Premium package</li>
+              <li>Anywhere in San Diego County</li>
+            </ul>
+            <p class="book-alt">Prefer email?<br><a href="mailto:gibran.corro05@gmail.com">gibran.corro05@gmail.com</a></p>
+          </div>
+
+          <!-- To change where bookings go, update the email in data-endpoint below. -->
+          <form id="booking-form" class="form" data-endpoint="https://formsubmit.co/ajax/gibran.corro05@gmail.com" novalidate>
+            <input type="hidden" name="_subject" value="New catering request — BFF Coffee website">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+            <div class="field">
+              <label for="f-type">Event type</label>
+              <select id="f-type" name="event_type" required>
+                <option value="">Choose one</option>
+                <option>Wedding</option>
+                <option>Corporate event</option>
+                <option>Private party</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-date">Event date</label>
+              <input id="f-date" name="event_date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="f-guests">Number of guests</label>
+              <input id="f-guests" name="guests" type="number" min="30" step="1" inputmode="numeric" placeholder="30+" required>
+            </div>
+            <div class="field">
+              <label for="f-package">Package</label>
+              <select id="f-package" name="package" required>
+                <option value="">Choose a package</option>
+                <option>Basic</option>
+                <option>Premium</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-location">Event location</label>
+              <input id="f-location" name="location" type="text" placeholder="Venue or neighborhood" required>
+            </div>
+            <div class="field field-full">
+              <label for="f-notes">Anything else? <span class="optional">(optional)</span></label>
+              <textarea id="f-notes" name="notes" rows="3" placeholder="Start time, theme, special requests…"></textarea>
+            </div>
+            <div class="field-full form-foot">
+              <button type="submit" class="btn">Send booking request</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div class="contact-intro reveal">
+          <p class="eyebrow">Say hello</p>
+          <h2>Contact Us</h2>
+          <p class="muted">Questions about a pop-up, the menu, or an event that doesn't fit the form? Reach out any way you like.</p>
+        </div>
+        <ul class="contact-list reveal">
+          <li>
+            <a href="mailto:gibran.corro05@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+              <span><strong>Email</strong>gibran.corro05@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/beanfrostyfusion/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+              <span><strong>Instagram</strong>@beanfrostyfusion</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/BeanFrostyFusion/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M15 8h-1.500A1.500 1.500 0 0 0 12 9.500V21M9.500 13h5"/></svg>
+              <span><strong>Facebook</strong>Bean Frosty Fusion</span>
+            </a>
+          </li>
+          <li>
+            <div>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.500A7 7 0 0 1 19 9.500C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <span><strong>Service area</strong>San Diego County</span>
+            </div>
+            <!-- PLACEHOLDER: to add a phone number, copy one of the <li> blocks above and use href="tel:+1619..." -->
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo-light.png" alt="BFF — Bean &amp; Frosty Fusion" width="264" height="292">
+        <div class="socials">
+          <a href="https://www.instagram.com/beanfrostyfusion/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/BeanFrostyFusion/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M15 8h-1.500A1.500 1.500 0 0 0 12 9.500V21M9.500 13h5"/></svg>
+          </a>
+          <a href="mailto:gibran.corro05@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Explore">
+        <h3>Explore</h3>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#events">Upcoming pop-ups</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="footer-col" aria-label="Catering">
+        <h3>Catering</h3>
+        <a href="#catering">Packages</a>
+        <a href="#book">Book now</a>
+      </nav>
+      <div class="footer-col footer-follow">
+        <h3>Follow the cart</h3>
+        <p>New pop-up dates and drinks show up on Instagram first.</p>
+        <a href="https://www.instagram.com/beanfrostyfusion/" target="_blank" rel="noopener" class="btn btn-ghost btn-small">@beanfrostyfusion</a>
+      </div>
+    </div>
+    <p class="footer-legal">© <span id="year">2026</span> BFF Coffee · Bean &amp; Frosty Fusion · San Diego, CA</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
